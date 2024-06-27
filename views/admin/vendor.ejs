@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from freshcart.codescandy.com/dashboard/vendor-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 09:08:59 GMT -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta content="Codescandy" name="author" />
+    <title>Vendor List Dashboard eCommerce HTML Template - FreshCart</title>
+    <!-- Favicon icon-->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../images/favicon/favicon.ico"
+    />
+
+    <!-- Libs CSS -->
+    <link
+      href="../libs/bootstrap-icons/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../libs/feather-webfont/dist/feather-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../css/theme.min.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M8S4MT3EYG");
+    </script>
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "kuc8w5o9nt");
+    </script>
+  </head>
+
+  <body>
+    <!-- main wrapper -->
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-glass">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center w-100">
+          <div class="d-flex align-items-center">
+            <a
+              class="text-inherit d-block d-xl-none me-4"
+              data-bs-toggle="offcanvas"
+              href="#offcanvasExample"
+              role="button"
+              aria-controls="offcanvasExample"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-text-indent-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm10.646 2.146a.5.5 0 0 1 .708.708L11.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zM2 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div>
+            <ul
+              class="list-unstyled d-flex align-items-center mb-0 ms-5 ms-lg-0"
+            >
+            
+              <li class="dropdown ms-4">
+                <a
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../images/avatar/avatar-1.jpg"
+                    alt=""
+                    class="avatar avatar-md rounded-circle"
+                  />
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-end p-0">
+                  <div class="lh-1 px-5 py-4 border-bottom">
+                    <h5 class="mb-1 h6">FreshCart Admin</h5>
+                    <small>admindemo@email.com</small>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-wrapper">
+      <!-- navbar vertical -->
+      <!-- navbar -->
+      <nav class="navbar-vertical-nav d-none d-xl-block">
+        <div class="navbar-vertical">
+          <div class="px-4 py-5">
+            <a href="./adminHome" class="navbar-brand">
+              <img src="../images/logo/freshcart-logo.svg" alt="" />
+            </a>
+          </div>
+          <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column" id="sideNavbar">
+              <li class="nav-item">
+                <a class="nav-link" href="./adminHome">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-house"></i
+                    ></span>
+                    <span class="nav-link-text">Dashboard</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item mt-6 mb-3">
+                <span class="nav-label">Store Managements</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./products">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-cart"></i
+                    ></span>
+                    <span class="nav-link-text">Products</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./categories">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-list-task"></i
+                    ></span>
+                    <span class="nav-link-text">Categories</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/order-list">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                    <span class="nav-link-text">Orders</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active" href="./vendor">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-shop"></i
+                    ></span>
+                    <span class="nav-link-text">Coupon</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./customers">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-people"></i
+                    ></span>
+                    <span class="nav-link-text">Customers</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/admin/banners">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                    <span class="nav-link-text">Banner Management</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/promotion">
+                  <div class="d-flex align-items-center">
+                  <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                  <span class="nav-link-text">Promotions</span>
+                  </div>
+                </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./reviews">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-star"></i
+                    ></span>
+                    <span class="nav-link-text">Reviews</span>
+                  </div>
+                </a>
+              </li>
+
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav
+        class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac"
+        tabindex="-1"
+        id="offcanvasExample"
+      >
+        <div class="navbar-vertical">
+          <div
+            class="px-4 py-5 d-flex justify-content-between align-items-center"
+          >
+            <a href="../index.html" class="navbar-brand">
+              <img src="../images/logo/freshcart-logo.svg" alt="" />
+            </a>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="./adminHome">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-house"></i
+                    ></span>
+                    <span>Dashboard</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item mt-6 mb-3">
+                <span class="nav-label">Store Managements</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./products">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-cart"></i
+                    ></span>
+                    <span class="nav-link-text">Products</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./categories">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-list-task"></i
+                    ></span>
+                    <span class="nav-link-text">Categories</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link collapsed"
+                  href="./order-list"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navOrders"
+                  aria-expanded="false"
+                  aria-controls="navOrders"
+                >
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                    <span class="nav-link-text">Orders</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./vendor">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-shop"></i
+                    ></span>
+                    <span class="nav-link-text">Sellers / Vendors</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./customers">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-people"></i
+                    ></span>
+                    <span class="nav-link-text">Customers</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/admin/banners">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                    <span class="nav-link-text">Banner Management</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/admin/promotion">
+                  <div class="d-flex align-items-center">
+                  <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                  <span class="nav-link-text">Promotions</span>
+                  </div>
+                </a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./reviews">
+                  <div class="d-flex align-items-center">
+                    <span class="nav-link-icon"
+                      ><i class="bi bi-star"></i
+                    ></span>
+                    <span class="nav-link-text">Reviews</span>
+                  </div>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- main -->
+      <main class="main-content-wrapper">
+        <div class="container">
+          <div class="row mb-8">
+            <div class="col-md-12">
+              <!-- page header -->
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h2>Vendors</h2>
+                  <!-- breacrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a href="./adminHome" class="text-inherit">Dashboard</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Vendors
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+                <!-- button -->
+                <div>
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addCouponModal"
+                    id="addCouponBtn"
+                  >
+                    Add Coupon
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-xl-12 col-12 mb-5">
+              <div class="card h-100 card-lg">
+                <div class="p-6">
+                  <div class="row">
+                    <!-- search bar -->
+                    <div class="col-md-4 col-12">
+                      <form class="d-flex" role="search">
+                        <input
+                          class="form-control me-2"
+                          type="search"
+                          id="search-input"
+                          placeholder="Search coupons"
+                          aria-label="Search"
+                          oninput="search()"
+                        />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- add coupon modal -->
+                <div id="addCouponModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                      <div class="modal-content border-0">
+                          <div class="modal-header px-4 pt-4">
+                              <h5 class="modal-title fs-18" id="exampleModalLabel">Add Coupons</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="close-modal"></button>
+                          </div>
+                          <div class="modal-body p-4">
+                              <form class="tablelist-form addCoupon-form" novalidate autocomplete="off">
+                                  <div class="row">
+                                      <div id="alert-error-msg" class="d-none alert alert-danger py-2"></div>
+                                      <input type="hidden" id="id-field" />
+              
+                                      <div class="col-xxl-12 col-lg-6">
+                                          <div class="mb-4 d-flex">
+                                              <div class="position-relative">
+                                                  <img class="image icon-shape icon-xxxl bg-light rounded-4" src="../images/icons/bakery.svg" alt="Image" id="image" />
+              
+                                                  <div class="file-upload position-absolute end-0 top-0 mt-n2 me-n1">
+                                                      <input accept="image/*" id="fileInput" type="file" class="file-input" />
+                                                      <span class="icon-shape icon-sm rounded-circle bg-white">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-pencil-fill text-muted" viewBox="0 0 16 16">
+                                                              <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+                                                          </svg>
+                                                      </span>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <p id="imageError" class="text-danger"></p>
+                                      </div>
+                                      <div class="col-lg-12">
+                                          <div class="mb-3">
+                                              <label for="couponTitle" class="form-label">Coupon Title</label>
+                                              <input type="text" class="form-control" name="couponTitle" id="couponTitle-field" placeholder="Coupon title" required />
+                                              <p id="titleError" class="text-danger"></p>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="mb-3">
+                                              <label for="couponCode" class="form-label">Coupon applying condition ₹</label>
+                                              <input type="number" class="form-control" id="condition-field" placeholder="Enter amount" name="amount" required />
+                                              <p id="conditionError" class="text-danger"></p>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="mb-3">
+                                              <label for="couponCode" class="form-label">Minimum purchase amount (to claim) ₹</label>
+                                              <input type="number" class="form-control" id="limit-field" placeholder="Enter amount" name="minimumPurchase" required />
+                                              <p id="limitError" class="text-danger"></p>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="mb-3">
+                                              <label for="amountPercentage" class="form-label">Amount</label>
+                                              <input type="number" class="form-control" id="discount-field" placeholder="Enter percentage" name="discount" required />
+                                              <p id="discountError" class="text-danger"></p>
+                                          </div>
+                                      </div>
+                                      <div class="col-lg-6">
+                                          <div class="mb-3">
+                                              <label for="amountPercentage" class="form-label">Total coupons (count)</label>
+                                              <input type="number" class="form-control" id="count-field" placeholder="Enter the count" name="count" required />
+                                              <p id="countError" class="text-danger"></p>
+                                          </div>
+                                      </div>
+              
+                                      <div class="col-lg-12 modal-footer">
+                                          <p class="formError text-danger"></p>
+                                          <p class="formSuccess text-success"></p>
+                                          <div class="hstack gap-2 justify-content-end">
+                                              <button type="button" class="btn btn-ghost-danger" data-bs-dismiss="modal">
+                                                  <i class="ri-close-line align-bottom me-1"></i>
+                                                  Close
+                                              </button>
+                                              <button class="btn btn-primary" id="add-btn">
+                                                  Add Coupons
+                                              </button>
+                                              <span id="couponAddingErr" class="text-danger"></span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <!-- /.modal-content -->
+                  </div>
+                  <!-- /.modal-dialog -->
+              </div>
+              
+
+                <!-- card body -->
+                <div class="card-body p-0">
+                  <!-- table -->
+                  <div class="table-responsive">
+                    <table class="table table-centered table-hover text-nowrap table-borderless mb-0" id="coupon-table">
+                      <thead class="bg-light">
+                        <tr>
+                          <th>Code</th>
+                          <th>Discount</th>
+                          <th>Min.Purchase</th>
+                          <th>Total Coupon</th>
+                          <th>Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody>                                                
+                        <% ActivedCoupon.forEach(coupon => { %>
+                        <tr>
+                          <td><%- coupon.code %></td>
+                          <td><%- coupon.discount %></td>
+                          <td><%- coupon.minPurchase %></td>
+                          <td><%- coupon.totalCoupon %></td>
+                          <td><a class="coupon-delete" data-id="<%- coupon._id %>" ><i class="bi bi-trash"></a></i></td>                          
+                        </tr>
+                        <% }) %>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="border-top d-md-flex justify-content-between align-items-center p-6">
+                <span>Showing <%- ( currentPage - 1 ) * limit + 1 %> to <%- currentPage * limit %> of <%- couponCount %> entries</span>
+                <nav>
+                  <ul class="pagination mb-0">
+                    <% if (previous) { %>
+                      <li class="page-item"><a
+                        class="page-link"
+                        href="./vendor?page=<%- previous %>"
+                      >Previous</a></li>
+                    <% } %>
+                    <% 
+                    // for showing only 3 pagination buttons eg : previous 3 4 5 next
+                    let start = Math.max( 1 , currentPage - 1 );
+                    let end = Math.min( start + 2 , totalPages )
+                    %>
+                    <% for( let i = start; i <= end; i++ ) { %>
+                      <li class="page-item"><a class="page-link <%= i === currentPage ? 'active' : '' %>" href="./vendor?page=<%= i %>"> <%= i %> </a></li>
+                    <% } %>
+                    <% if (next) { %>
+                      <li class="page-item"><a
+                        class="page-link"
+                        href="./vendor?page=<%= next %>"
+                      >Next</a></li>
+                    <% } %>
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+    <!-- Javascript  -->
+    <script src="../../user/assets/js/coupon.js"></script>
+    <!-- Libs JS -->
+    <!-- <script src="../libs/jquery/dist/jquery.min.js"></script> -->
+    <script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="../js/theme.min.js"></script>
+  </body>
+
+  <!-- Mirrored from freshcart.codescandy.com/dashboard/vendor-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 09:08:59 GMT -->
+</html>

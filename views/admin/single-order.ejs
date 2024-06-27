@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Single Order Details</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { font-family: Arial, sans-serif; font-size: 14px; }
+  .container { margin-top: 20px; }
+  .order-header { background-color: #f8f9fa; padding: 20px; margin-bottom: 20px; border-radius: 5px; }
+  .order-info, .product-list { margin-bottom: 20px; }
+  .product-list th, .product-list td { text-align: center; font-size: 14px; }
+  .status-select { padding: 5px; }
+  .update-btn { background-color: #28a745; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+  .address-section { background-color: #f8f9fa; padding: 20px; border-radius: 5px; }
+  .header-logo { max-height: 50px; }
+  .table-custom th { background-color: #343a40; color: #fff; }
+  .table-custom td { background-color: #f1f1f1; }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="../../user/assets/images/logo/freshcart-logo.svg" alt="FreshCart Logo" class="header-logo">
+  </a>
+</nav>
+
+<div class="container">
+    <div class="order-header d-flex justify-content-between">
+        <div>
+            <h2>Order Details</h2>
+        </div>
+            <button class="btn btn-success">Download</button> 
+    </div>
+
+  <div class="row">
+    <div class="col-md-6 order-info">
+      <h4>Order Information</h4>
+      <% orderDetails.forEach(order => { %>
+      <table class="table table-borderless">
+        <input value="<%- order.user._id %>" id="userId" hidden>
+        <input value="<%- order.paymentMethod %>" id="paymentMethod" hidden>
+        <tr>
+          <th>Customer Name:</th>
+          <td><%- order.user.fname %> <%- order.user.lname %></td>
+        </tr>
+        <tr>
+            <% const date = new Date(order.orderDate).toLocaleDateString('en-US',{day : '2-digit',month : 'short',year : 'numeric'}) %>
+          <th>Date:</th>
+          <td><%- date %></td>
+        </tr>
+        <tr>
+          <th>Total Amount:</th>
+          <td><%- order.transaction_Amt %></td>
+        </tr>
+      </table>
+      <% }) %>
+    </div>
+    <div class="col-md-6 address-section">
+      <h4>Shipping Address</h4>
+      <p><strong>Address:</strong> SEBIN</p>
+      <p><strong>State:</strong> Kerala</p>
+      <p><strong>District:</strong> Eranakulam</p>
+      <p><strong>City:</strong> AEBIN</p>
+      <p><strong>Pincode:</strong> 680005</p>
+      <p><strong>Phone:</strong> 8281131411</p>
+    </div>
+  </div>
+
+  <h3>Products in this Order:</h3>
+  <table class="table table-striped product-list table-custom">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total Price</th>
+        <th>Status</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% orderDetails.forEach(order => { %>
+    <% order.products.forEach(product => { %>
+    <tr>
+      <td><img src="../../user/assets/images/productImages/<%- product.product.image[0] %>" alt="<%- product.product.productName %>" style="height: 50px; width: 50px;" class="img-fluid"></td>
+      <td><%- product.product.productName %></td>
+      <td><%- product.quantity %></td>
+      <td><%- product.price %></td>
+      <td><%- product.totalPrice %></td>
+        <input value="<%- product.totalPrice %>" id="totalPrice" hidden>
+      <td>
+        <% if (product.status == 'Requested for Return') { %>
+            <select class="status-select form-control statusUpdate" data-product-id="<%- product._id %>" onchange="statusUpdate(this)">
+                <option value="<%- product.status %>" selected><%- product.status %></option>
+                <option value="Returned">Return</option>
+            </select>
+        <% } else if (product.status == 'Requested to Cancel') { %>
+            <select class="status-select form-control statusUpdate" data-product-id="<%- product._id %>" onchange="statusUpdate(this)">
+                <option value="Cancelled" selected><%- product.status %></option>
+                <option value="Cancelled">Cancel</option>
+            </select>
+            <% } else if (product.status == 'Returned' || product.status == 'Cancelled' ) { %>
+                <select class="status-select form-control statusUpdate" data-product-id="<%- product._id %>">
+                    <option value="<%- product.status %>" selected><%- product.status %></option>
+                </select>
+        <% } else { %>
+            <select class="status-select form-control statusUpdate" data-product-id="<%- product._id %>" onchange="statusUpdate(this)">
+                <option value="<%- product.status %>" selected><%- product.status %></option>
+                <option value="Delivered">Delivered</option>
+            </select>
+        <% } %>
+      </td>
+      
+    </tr>
+    <% }) %>
+    <% }) %>
+    </tbody>
+  </table>
+</div>
+
+<script src="../../user/assets/js/singleOrder.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
