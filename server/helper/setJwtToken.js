@@ -1,5 +1,5 @@
-const { status } = require('init');
 const jwt = require('jsonwebtoken')
+const { status } = require('init');
 
 
 // Function to generate a JWT
