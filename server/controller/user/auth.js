@@ -20,7 +20,24 @@ const landingPage = async (req, res) => {
   try {
     const categoryItems = await Category.find({ deletedAt: "listed" });
     const productItems = await Product.find({ deletedAt: "Not-Deleted" });
-    res.render("landingPage", { categoryItems, productItems });
+    //BEST SELLING PRODUCTS
+    const bestSellingProducts = await Orders.aggregate([
+      {$unwind : '$products'},
+      {$match : {'products.status' : 'Delivered'}},
+      {$group : {
+        _id : '$products.productId',
+        totalQuantity : {$sum : '$products.quantity'},
+      }},
+      {$lookup : {
+        from : 'products',
+        localField : '_id',
+        foreignField : '_id',
+        as : 'productDetails'
+      }},
+      {$sort : {totalQuantity : -1}},
+      {$limit : 10}
+    ])
+    res.render("landingPage", { categoryItems, productItems, bestSellingProducts });
   } catch (error) {
     console.log(error);
   }
